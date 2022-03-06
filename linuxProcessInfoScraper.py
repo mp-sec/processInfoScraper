@@ -1,12 +1,5 @@
 #!usr/bin/python3
 
-# Filename: m4p1.py
-# Author: Mandeep Parihar
-# Course: ITSC-204
-# Details: A program that will parse all running processes and display status information for each of them.
-# Resources: https://www.debuggex.com/cheatsheet/regex/python, https://docs.python.org/3/library/re.html,
-    # https://man7.org/linux/man-pages/man5/procfs.5.html
-
 import os
 import binascii
 
@@ -81,8 +74,6 @@ def printer(name, state, pid, ppid, rss, rsslim, start_code, end_code, start_sta
         proc.state = state_dict.get(state)
         state_full = proc.state
 
-    # I've learned that I really don't like formatting text in programming at all
-    # I'm sorry it's so plain, but at least it's readable
     print("Process Name:", name, "\nState:", state_full, "\nPID:", pid, "\nPPID:", ppid,
           "\nRSS:", rss, "\nRSSLIM:", rsslim, "\nStart Code:", start_code,
           "\nEnd Code:", end_code, "\nStart Stack:", start_stack, "\nStart Data:", start_data,
